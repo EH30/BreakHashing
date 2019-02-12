@@ -37,15 +37,14 @@ class hashCracker:
         self.pwd = raw_input("\033[1;32m wordlist: \033[1;m")
         self.cracker = open(self.pwd, "r")
 
-
     def md5(self):
         for log in self.cracker:
             log = log.strip()
             hashing = hashlib.md5(log).hexdigest()
+            upper_hashing = hashing.upper()
             print ("\033[1;32m Trying: {0} \033[1;m".format(log))
 
-
-            if self.hashed == hashing:
+            if self.hashed == hashing or self.hashed == upper_hashing:
                 print ("\033[1;34m [+] Hash Cracked: {0}\033[1;m".format(log))
                 break
 
@@ -53,9 +52,10 @@ class hashCracker:
         for log in self.cracker:
             log = log.strip()
             hashing = hashlib.sha1(log).hexdigest()
+            uppercase_hashing = hashing.upper()
             print ("\033[1;32mTrying: {0}\033[1;m".format(log))
 
-            if self.hashed == hashing:
+            if self.hashed == hashing or self.hashed == uppercase_hashing:
                 print ("\033[1;34m [+] Hash Cracked: {0}\033[1;m".format(log))
                 break
 
@@ -63,9 +63,10 @@ class hashCracker:
         for log in self.cracker:
             log = log.strip()
             hashing = hashlib.sha224(log).hexdigest()
+            uppercase_hashing = hashing.upper()
             print ("\033[1;32m Trying: {0}\033[1;m".format(log))
 
-            if self.hashed == hashing:
+            if self.hashed == hashing or self.hashed == uppercase_hashing:
                 print ("\033[1;34m [+] Hash Cracked: {0}\033[1;m".format(log))
                 break
 
@@ -73,9 +74,10 @@ class hashCracker:
         for log in self.cracker:
             log = log.strip()
             hashing = hashlib.sha256(log).hexdigest()
+            uppercase_hashing = hashing.upper()
             print ("\033[1;32m Trying: {0}\033[1;m".format(log))
 
-            if self.hashed == hashing:
+            if self.hashed == hashing or self.hashed == uppercase_hashing:
                 print ("\033[1;34m [+] Hash Cracked: {0}\033[1;m".format(log))
                 break
 
@@ -83,9 +85,10 @@ class hashCracker:
         for log in self.cracker:
             log = log.strip()
             hashing = hashlib.sha384(log).hexdigest()
+            uppercase_hashing = hashing.upper()
             print ("\033[1;32m Trying {0}\033[1;m".format(log))
 
-            if self.hashed == hashing:
+            if self.hashed == hashing or self.hashed == uppercase_hashing:
                 print ("\033[1;34m [+] Hash Cracked: {0}\033[1;m".format(log))
                 break
 
@@ -93,11 +96,13 @@ class hashCracker:
         for log in self.cracker:
             log = log.strip()
             hashing = hashlib.sha512(log).hexdigest()
+            uppercase_hashing = hashing.upper()
             print ("\033[1;32m Trying {0}\033[1;m".format(log))
 
-            if self.hashed == hashing:
+            if self.hashed == hashing or self.hashed == uppercase_hashing:
                 print ("\033[1;34m [+] Hash Cracked: {0}\033[1;m".format(log))
                 break
+
 
 crack = hashCracker()
 
