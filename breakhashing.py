@@ -18,7 +18,7 @@ elif sys.platform == "win32":
 elif sys.platform == "darwin":
     os.system("clear")
 else:
-    print ("Unkown System Detected")
+    print ("Unknown System Detected")
 
 class hashCracker:
     def __init__(self):
