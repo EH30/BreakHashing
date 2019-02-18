@@ -32,7 +32,7 @@ class hashCracker:
             6)sha512
         \033[1;m
         """
-        self.hashchoice = raw_input("\033[1;32m Ender Your choice: \033[1;m")
+        self.hashchoice = raw_input("\033[1;32m Enter Your choice: \033[1;m")
         self.hashed = raw_input("\033[1;32m Enter You're Hash: \033[1;m")
         self.pwd = raw_input("\033[1;32m wordlist: \033[1;m")
         self.cracker = open(self.pwd, "r")
